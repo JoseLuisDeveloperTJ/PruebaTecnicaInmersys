@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #38404B;
+  font-weight: 600;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+.inputTask{
+ border-radius: 15px 0px 0px 15px;
+ border: none;
+ outline: none;
+ padding: 8px;
+ background-color: #454e5b;
+ color: white;
+ width: 30%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.inputAdd{
+  background-color: white;
+  padding: 8px;
+  border-radius: 0px 10px 10px 0px;
+  width: 8%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.inputAdd:hover{
+  background-color: #707d90;
+  transition: all 0.2s;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.titleTasksCompleted{
+  font-size: 22px;
+  color: white;
+  margin-top: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+.columnCount{
+  padding: 30px;
+  column-count: 2;
+  max-height: 200px;
+}
+
+.cardContainer{
+  margin-top: 3rem;
+  background-color: #454e5b ;
+  padding: 10px;
+  color: white;
+  border-radius: 15px;
+  width: 80%;
+}
+
+.button-container {
+  display: flex;
+  margin-left: auto; 
+gap: 8px;
+}
+
+.custom-button{
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.custom-button:hover{
+  background-color: #707d90;
+  color: white;
+  transition: all 0.2s;
+}
+
+.delete-button{
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.delete-button:hover{
+  background-color: rgb(173, 1, 1);
+  transition: all 0.2s;
+}
+
+
+.task-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 50px;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 10px;
+}
+
+/*Media querys para  le responsive Gg */
+
+@media (max-width: 768px) {
+  .column {
+    grid-template-columns: 1fr; 
   }
-  to {
-    transform: rotate(360deg);
+  .cardContainer{
+    width: 100%;
   }
+  .inputTask{
+    width: 62%;
+  }
+  .inputAdd{
+    width: 17%;
+    font-size: 15px;
+  }
+}
+
+
+.circle {
+  width: 20px; 
+  height: 20px; 
+  border: 2px solid #ffffff; 
+  border-radius: 50%; 
+  margin-right: 10px; 
+}
+
+.circle.completed {
+  background: #00FF00; 
+}
+
+.completed-task {
+  text-decoration: line-through;
 }

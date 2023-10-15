@@ -47,7 +47,7 @@ function TaskList() {
         </button>
       </div>
 
-      <div className="flex flex-col task-list px-10">
+      <div className="flex flex-col task-list px-5">
         <div className="column-container">
           <ul className="column">
             {tasks.map((task, index) => (

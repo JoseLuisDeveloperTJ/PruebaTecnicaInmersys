@@ -116,15 +116,15 @@ gap: 8px;
     width: 100%;
   }
   .inputTask{
-    width: 72%;
+    width: 80%;
   }
   .inputAdd{
-    width: 19%;
+    width: 18%;
     font-size: 15px;
   }
 
   .task-list{
-    padding: 20px;
+    padding: 10px;
   }
 }
 
